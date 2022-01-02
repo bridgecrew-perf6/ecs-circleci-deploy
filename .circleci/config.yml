@@ -9,6 +9,7 @@ workflows:
           account-url: AWS_ECR_ACCOUNT_URL
           repo: "ecs-deploy-sample"
           tag: "${CIRCLE_SHA1}"
+          region: AWS_REGION
 
       - aws-ecs/deploy-service-update: #(4)
           requires:
