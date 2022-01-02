@@ -15,4 +15,4 @@ workflows:
             - aws-ecr/build-and-push-image
           family: "app-nginx"
           cluster-name: "circle-ci-learning"
-          container-image-name-updates: "container=nginx,image-and-tag=${AWS_ECR_ACCOUNT_URL}/nginx:${CIRCLE_SHA1}"
+          container-image-name-updates: "container=ecs-circle-ci-sample,tag=${CIRCLE_SHA1}"
