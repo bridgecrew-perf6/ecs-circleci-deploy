@@ -7,7 +7,7 @@ workflows:
     jobs:
       - aws-ecr/build-and-push-image: #(3)
           account-url: AWS_ECR_ACCOUNT_URL
-          repo: "nginx"
+          repo: "ecs-deploy-sample"
           tag: "${CIRCLE_SHA1}"
 
       - aws-ecs/deploy-service-update: #(4)
